@@ -1,0 +1,22 @@
+[
+  {"question": "How many days of PTO can I carry over to next year?", "expected_chunk": "pto_policy.md::chunk_2", "difficulty": "easy"},
+  {"question": "How much does the Pro plan cost?", "expected_chunk": "product_faq.md::chunk_2", "difficulty": "easy"},
+  {"question": "What encryption do you use for stored customer data?", "expected_chunk": "security_policy.md::chunk_1", "difficulty": "easy"},
+  {"question": "How long is parental leave?", "expected_chunk": "pto_policy.md::chunk_6", "difficulty": "easy"},
+  {"question": "What's the refund window for Starter plan customers?", "expected_chunk": "refund_policy.md::chunk_1", "difficulty": "easy"},
+
+  {"question": "If I've been at the company less than 3 months, can I take my earned vacation days?", "expected_chunk": "pto_policy.md::chunk_1", "difficulty": "medium"},
+  {"question": "Does the platform have SSO for large customers?", "expected_chunk": "product_faq.md::chunk_2", "difficulty": "medium", "note": "SSO is only briefly mentioned inside this chunk, not its own section — known ambiguous case"},
+  {"question": "What's the process when a service goes down for several hours?", "expected_chunk": "refund_policy.md::chunk_5", "difficulty": "medium"},
+  {"question": "Who needs to approve unusual access to production systems?", "expected_chunk": "security_policy.md::chunk_2", "difficulty": "medium"},
+  {"question": "How fast does someone need to respond to a page overnight?", "expected_chunk": "oncall_runbook.md::chunk_1", "difficulty": "medium"},
+
+  {"question": "What happens if my big annual contract gets cancelled early?", "expected_chunk": "refund_policy.md::chunk_2", "difficulty": "hard"},
+  {"question": "Is there a penalty for going over my monthly usage on the cheapest tier?", "expected_chunk": "product_faq.md::chunk_5", "difficulty": "hard"},
+  {"question": "How long do you keep my information after I stop being a customer?", "expected_chunk": "security_policy.md::chunk_3", "difficulty": "hard"},
+  {"question": "What do I do first when the worker queue is backing up?", "expected_chunk": "oncall_runbook.md::chunk_3", "difficulty": "hard"},
+  {"question": "Do I get anything back if I leave the company with unused time off?", "expected_chunk": "pto_policy.md::chunk_7", "difficulty": "hard"},
+
+  {"question": "What's your company's stock price?", "expected_chunk": null, "difficulty": "no_answer"},
+  {"question": "What's the CEO's favorite food?", "expected_chunk": null, "difficulty": "no_answer"}
+]

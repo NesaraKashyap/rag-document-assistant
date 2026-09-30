@@ -1,0 +1,9 @@
+sentence-transformers
+chromadb
+rank_bm25
+fastapi
+uvicorn
+pydantic
+python-multipart
+pypdf
+ollama

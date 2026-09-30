@@ -1,0 +1,64 @@
+Option A: Docker Compose (the easiest way — one command)
+
+This is the setup we finished with, and it's the simplest to restart.
+
+python -m src.store_embeddings after adding new document to read and answer questions
+
+1. Make sure Ollama is running (it usually starts automatically, but confirm):
+
+ollama list
+
+If this doesn't respond, open the Ollama app or run ollama serve in a separate terminal.
+
+2. Make sure Docker Desktop is open and fully started (whale icon in system tray, not "starting...").
+
+3. Check nothing old is still running and blocking ports:
+
+docker ps
+
+If anything shows up occupying port 8000 or 5173, stop it:
+
+docker stop <name>
+
+4. Start everything:
+
+cd C:\rag-project
+docker-compose up
+
+5. Open your browser:
+
+http://localhost:5173
+
+That's it — one terminal window, one command, both frontend and backend running together.
+
+Option B: Manually, without Docker (useful for quick debugging/testing individual pieces)
+
+If you want to test something directly (like running run_eval.py or generate.py standalone) without spinning up containers:
+
+1. Make sure Ollama is running:
+
+ollama list
+
+2. Terminal 1 — activate your virtual environment and start the backend:
+
+cd C:\rag-project
+venv\Scripts\activate.bat
+uvicorn src.api:app --reload
+
+3. Terminal 2 — start the frontend:
+
+cd C:\rag-project\frontend
+npm run dev
+
+4. Browser:
+
+http://localhost:5173
+To run one-off scripts (like the eval or generate script) without starting servers
+
+From C:\rag-project, with your venv activated:
+
+venv\Scripts\activate.bat
+python -m src.run_eval
+python -m src.generate
+
+Remember: any file inside src/ that imports another file in src/ now needs to be run with python -m src.<filename> (no .py, dots instead of slashes) — not python src\<filename>.py — since the whole codebase uses relative imports now.

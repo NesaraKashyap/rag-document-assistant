@@ -1,0 +1,51 @@
+.app-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: system-ui, sans-serif;
+}
+
+.input-row {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.input-row input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.input-row button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.result {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.error {
+  color: red;
+}
+
+.verdict-yes {
+  color: green;
+}
+
+.verdict-partial {
+  color: orange;
+}
+
+.verdict-no {
+  color: red;
+}
+
+.timing {
+  color: gray;
+  font-size: 14px;
+  margin-top: 20px;
+}
